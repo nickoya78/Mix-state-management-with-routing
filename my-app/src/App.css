@@ -1,0 +1,37 @@
+.App {
+  display: flex;
+  margin-top: 2px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(198, 231, 160);
+}
+
+.home {
+  display: flex;
+  margin-top: 2px;
+  padding: 200px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(240, 240, 48);
+}
+.about {
+  display: flex;
+  margin-top: 2px;
+  padding: 200px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(253, 196, 91);
+}
+.NotFoundPage {
+  display: flex;
+  margin-top: 2px;
+  padding: 250px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: aqua;
+}
