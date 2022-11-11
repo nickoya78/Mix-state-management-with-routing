@@ -1,15 +1,20 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 export default function Home(props) {
-  const location = useLocation();
-  console.log(props, "props");
-  console.log(location, "useLocation Hook");
-  const detail = location.state?.detail;
+  const users = useSelector((state) => state.users.value);
   return (
     <div className="home">
-      <h3>Home Page</h3>
-      <h1>{detail ? detail.title : "Go to Home"}</h1>
+      <h1>Home Page</h1>
+      <h3>List of users</h3>
+      <ul>
+        {users.map((u) => (
+          <li>
+            <Link to={`/users/${u.id}`}>{u.name}</Link>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

@@ -10,6 +10,7 @@ import {
 import HomePage from "./components/Home";
 import NotFoundPage from "./components/NotFoundPage";
 import About from "./components/About";
+import User from "./components/User";
 
 function App() {
   const [data, setData] = useState({
@@ -56,7 +57,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/404" element={<NotFoundPage />} />
         <Route path="/about" element={<About />} />
-
+        <Route path="/users/:id" element={<User />} />
         <Route path="*" element={<Navigate replace to="/404" />} />
       </Routes>
     </Router>
